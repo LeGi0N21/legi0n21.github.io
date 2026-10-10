@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Carlos' Assessment 3</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #243329;
+            background-color: #F2F7FC;
+        }
+
+        header, footer {
+            background-color: #1769AA;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+
+        nav a {
+            color: white;
+            font-weight: bold;
+        }
+
+        main {
+            max-width: 900px;
+            width: 90%;
+            margin: 30px auto;
+        }
+
+        section {
+            background: white;
+            padding: 24px;
+            margin-bottom: 24px;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #0D3557;
+        }
+
+        .hero {
+            text-align: center;
+        }
+
+        .hero-image {
+            display: block;
+            width: 100%;
+            max-width: 650px;
+            max-height: 380px;
+            object-fit: cover;
+            margin: 20px auto;
+            border-radius: 8px;
+        }
+
+        button, .button-link {
+            display: inline-block;
+            padding: 12px 20px;
+            background: #1769AA;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        a:focus-visible, button:focus-visible {
+            outline: 3px solid #d18b00;
+            outline-offset: 3px;
+        }
+
+        @media (max-width: 600px) {
+            main {
+                width: 94%;
+            }
+
+            section {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Carlos' Assessment 3</h1>
+        <p>Swinburne University of Technology</p>
+
+        <nav aria-label="Main navigation">
+            <a href="index.html" aria-current="page">Home</a>
+            <a href="anime.html">Anime</a>
+            <a href="interests.html">Interests</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Welcome to my home page for my Assessment 3</h2>
+
+            <p>
+                I have built this webpage to demonstrate that I know how to develop a webpage!
+            </p>
+
+            <img
+                src="images/Swinburne.svg"
+                alt="Swinburne University of Technology logo"
+                class="hero-image">
+
+            <button type="button" id="welcomeButton">
+                Press here for a message!
+            </button>
+
+            <p id="welcomeMessage" aria-live="polite"></p>
+        </section>
+
+        <section>
+            <h2>What is required for this Assessment?</h2>
+
+            <p>
+                 I am required to demonstrate that I know how to make webpages that include navigation, javascript function, a table or form, an image and basic CSS formatting.
+            </p>
+			
+			<p>
+			     The other 2 pages I will talk about my favourite anime and interests!
+		    </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 106865441@student.swin.edu.au</p>
+    </footer>
+
+    <script>
+        // Find the button and message paragraph.
+        const welcomeButton =
+            document.getElementById("welcomeButton");
+
+        const welcomeMessage =
+            document.getElementById("welcomeMessage");
+
+        // Display a message when the button is clicked.
+        welcomeButton.addEventListener("click", function () {
+            welcomeMessage.textContent =
+                "Thank you for visiting my home page for my Assessment 3!.";
+        });
+    </script>
+</body>
+</html>
